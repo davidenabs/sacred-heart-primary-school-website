@@ -1,0 +1,343 @@
+
+
+.shs-bg-primary-color {
+    background-color: rgb(31, 30, 112);
+}
+
+.shs-text-primary-color {
+    color: rgb(31, 30, 112);
+    /* color: ; */
+}
+
+
+.ca-activities {
+    padding: 40px;
+}
+
+.ca-activities .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.ca-activities .thumbnail:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.ca-activities .lightbox img {
+    border-radius: 4px 4px 0 0;
+}
+
+.ca-activities .caption {
+    padding: 26px 30px;
+    text-align: center;
+}
+
+.ca-activities .caption h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.ca-activities .caption p {
+    font-size: 12px;
+    color: #7b7d7d;
+    margin: 0;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+/* Define a custom class to change background color to blue */
+/* Define a custom class to change background color to blue */
+.bg-blue {
+    background-color: rgb(31, 30, 112);
+}
+
+.img-fixed-size {
+    height: 400px;
+    /* Set the desired fixed height */
+    width: 100%;
+    /* Set the desired fixed width */
+    object-fit: cover;
+    /* Ensure the image fills its container and maintains aspect ratio */
+}
+
+/* Define styles for carousel images and overlay in mobile and tablet view */
+/* Style the static text on top of the carousel */
+.static-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* Ensure the text appears above the carousel images */
+    text-align: center;
+}
+
+/* Define styles for carousel images and overlay in mobile and tablet view */
+@media (max-width: 992px) {
+    .carousel-inner {
+        position: relative;
+    }
+
+    .static-text {
+      top: 45%;
+    }
+
+    .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        /* Add a dark overlay color */
+    }
+
+    /* Add custom CSS for fade in/out effect */
+
+
+}
+
+
+
+#demo {
+height:100%;
+position:relative;
+overflow:hidden;
+}
+
+
+.green{
+background-color:#6fb936;
+}
+  .thumb{
+      margin-bottom: 30px;
+  }
+
+  .page-top{
+      margin-top:85px;
+  }
+
+
+img.zoom {
+width: 100%;
+height: 200px;
+border-radius:5px;
+object-fit:cover;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+}
+
+
+.transition {
+-webkit-transform: scale(1.2);
+-moz-transform: scale(1.2);
+-o-transform: scale(1.2);
+transform: scale(1.2);
+}
+.modal-header {
+
+border-bottom: none;
+}
+.modal-title {
+  color:#000;
+}
+.modal-footer{
+display:none;
+}
+
+.light-g-blue {
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+  #footer {
+    background: #fff;
+    padding: 0 0 30px 0;
+    color: #444444;
+    font-size: 14px;
+    background: #f1f6fe;
+  }
+
+  #footer .footer-newsletter {
+    padding: 50px 0;
+    background: #f1f6fe;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  #footer .footer-newsletter h4 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+  }
+
+  #footer .footer-newsletter form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+    text-align: left;
+  }
+
+  #footer .footer-newsletter form input[type="email"] {
+    border: 0;
+    padding: 4px 8px;
+    width: calc(100% - 100px);
+  }
+
+  #footer .footer-newsletter form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 20px;
+    background: rgb(31, 30, 112);
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  #footer .footer-newsletter form input[type="submit"]:hover {
+    background: #0a19be;
+  }
+
+  #footer .footer-top {
+    padding: 60px 0 30px 0;
+    background: rgb(31, 30, 112);
+  }
+
+  #footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+  }
+
+  #footer .footer-top .footer-contact h3 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  #footer .footer-top .footer-contact h3 span {
+    color: rgb(31, 30, 112);
+  }
+
+  #footer .footer-top .footer-contact p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+  }
+
+  #footer .footer-top h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    padding-bottom: 12px;
+  }
+
+  #footer .footer-top .footer-links {
+    margin-bottom: 30px;
+  }
+
+  #footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #footer .footer-top .footer-links ul i {
+    padding-right: 2px;
+    color: rgb(31, 30, 112);
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  #footer .footer-top .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  #footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+  }
+
+  #footer .footer-top .footer-links ul a {
+    color: #eee;
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  #footer .footer-top .footer-links ul a:hover {
+    text-decoration: none;
+    color: #999;
+  }
+
+  #footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #fff;
+    color: rgb(31, 30, 112);
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+
+  #footer .footer-top .social-links a:hover {
+    background: #fff;
+    color: #999;
+    text-decoration: none;
+  }
+
+  #footer .copyright {
+    text-align: center;
+    float: left;
+  }
+
+  #footer .credits {
+    float: right;
+    text-align: center;
+    font-size: 13px;
+    color: #444444;
+  }
+
+  @media (max-width: 768px) {
+    #footer .copyright, #footer .credits {
+      float: none;
+      text-align: center;
+      padding: 2px 0;
+    }
+  }
+  
