@@ -78,10 +78,8 @@
     {{-- mobile --}}
     <div class="container-fluid position-relative px-0 px-md-5 mb-5 d-lg-none">
 
-        <div class="d-fle align-content-center">
-            <section id="hero" class="static-text">
-                <div>
-                    <div class="display-4 text-white font-weight-bold animate__animated animate__backInLeft">
+            <div class="static-text">
+                    <div class="display-4 text-white font-weight-bold animate__animatedanimate__backInLeft">
                         Sacred Heart<br>Primary School
                       </div>
                       <p class="text-white mb-4 text-center animate__animated animate__backInRight">Our vision is to build a
@@ -91,8 +89,6 @@
 
                       <a href="{{ route('about') }}" class="btn btn-whit mb-5 btn-outline-light animate__animated animate__bounce">Learn More</a>
                 </div>
-              </section>
-        </div>
 
         <!-- Carousel section with image transition -->
         <div id="carouselExampleFade" class="carousel slide carousel-fade pointer-event" data-ride="carousel" style="">
