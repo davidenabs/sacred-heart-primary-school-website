@@ -25,7 +25,6 @@ Route::post('/contact-us', [App\Http\Controllers\Guest\MainController::class, 'c
 Route::get('/our-management', [App\Http\Controllers\Guest\MainController::class, 'management'])->name('management');
 Route::get('/gallery', [App\Http\Controllers\Guest\MainController::class, 'gallery'])->name('gallery');
 Route::get('/gallery-show/{gallery}', [App\Http\Controllers\Guest\MainController::class, 'galleryShow'])->name('gallery.show');
-// Route::get('/news', [App\Http\Controllers\Guest\MainController::class, 'blog'])->name('blog');
 Route::get('/apply-now', [App\Http\Controllers\Guest\MainController::class, 'apply'])->name('apply');
 // blog
 Route::get('/news-events', [App\Http\Controllers\Guest\Post\BlogController::class, 'index'])->name('blog.index');
@@ -41,6 +40,10 @@ Route::get('/unsubscribe', [App\Http\Controllers\Guest\MainController::class, 'u
 Route::post('/unsubscribe', [App\Http\Controllers\Guest\MainController::class, 'unsubscribe'])->name('unsubscribe.user');
 
 Route::get('/download/application-form', [App\Http\Controllers\Guest\MainController::class, 'downloadApplicationForm'])->name('download.app.form');
+
+Route::get('/sitemap.xml', [App\Http\Controllers\Guest\Sitemap\SitemapController::class, 'index'])->name('sitemap.index');
+Route::get('/sitemap/posts.xml', [App\Http\Controllers\Guest\Sitemap\PostSitemapController::class, 'index'])->name('sitemap.posts.index');
+Route::get('/sitemap/posts/{letter}.xml', [App\Http\Controllers\Guest\Sitemap\PostSitemapController::class, 'show'])->name('sitemap.posts.show');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session') ,'verified', 'activeuser'])->group(function () {
 
