@@ -12,7 +12,7 @@
             'title' => '403 ERROR! ',
             'message' =>
                 'The page you are trying to access is not authorized or (not logged in) <br> Try going back to the Homepage',
-            'imageLink' => asset('frontends/assets/img/403.jpg'),
+            'imageLink' => asset('frontend/assets/img/errors/403.jpg'),
         ])
     @endif
 @endsection

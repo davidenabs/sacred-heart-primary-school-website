@@ -26,9 +26,14 @@
         <div class="p-3 rounded bg-white shadow-sm">
         <ul class="list-group list-group-flush">
             @foreach ($categories as $category)
-            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                <a href="{{ route('category.show', $category->slug) }}" class="shs-text-primary-color">{{  $category->title }}</a>
-                <span class="badge badge-primary badge-pill">{{ $category->posts()->where('is_published', true)->where('is_draft', false)->count() }}</span>
+            <li class="list-group-item px-0 d-flexustify-content-between">
+                    <a href="{{ route('category.show', $category->slug) }}" class="shs-text-primary-color">
+                        {{  $category->title }}
+                        <span class="badge badge-primary badge-pill float-right">
+                            {{ $category->posts()->where('is_published', true)->where('is_draft', false)->count() }}
+                        </span>
+                    </a>
+
             </li>
             @endforeach
         </ul>
@@ -42,9 +47,9 @@
         <h4 class="mb-4">Recent Posts</h4>
         <div class="p-3 rounded bg-white shadow-sm">
         @foreach ($recentPosts as $item)
-        <div class="d-flex lign-items-center bg-none border-bottom overflow-hidden mb-3 revealfade-left">
-            <img class="" src="{{ asset($item->featured_image) }}" style="width: 50px; height: 50px;">
-            <div class="pl-3">
+        <div class="d-flex lign-items-center bg-none {{ $loop->last ? '' : ' border-bottom' }} overflow-hidden mb-3 revealfade-left">
+            <img class="d-md-block d-none" src="{{ asset($item->featured_image) }}" style="width: 50px; height: 50px;">
+            <div class="pl-md-3 pl-0">
                 <h6 class="mb-1"><a href="{{ route('blog.show', $item->slug) }}">{{ $item->title }}</a></h6>
                 <div class="w-100">
                     <small class="" style="font-size: 12px"><i class="fa fa-folder text-muted"></i> {{ $item->category->title }}</small>
@@ -62,10 +67,10 @@
     <div class="mb-5">
         <h4 class="mb-4">Popular Posts</h4>
         <div class="p-3 rounded bg-white shadow-sm">
-        @foreach ($popularPosts as $item)
-        <div class="d-flex align-items-center bg-none border-bottom overflow-hidden mb-3 revealfade-left">
-            <img class="" src="{{ asset($item->featured_image) }}" style="width: 50px; height: 50px;">
-            <div class="pl-3">
+        @foreach ($popularPosts as $key => $item)
+        <div class="d-flex align-items-center bg-none {{ $loop->last ? '' : ' border-bottom' }} overflow-hidden mb-3 revealfade-left">
+            <img class="d-md-block d-none" src="{{ asset($item->featured_image) }}" style="width: 50px; height: 50px;">
+            <div class="pl-md-3 pl-0"">
                 <h6 class="mb-1"><a href="{{ route('blog.show', $item->slug) }}">{{ $item->title }}</a></h6>
                 <div class="d-flex justify-content-between">
                     <small class="" style="font-size: 12px"><i class="fa fa-folder text-muted"></i> {{ $item->category->title }}</small>
@@ -75,7 +80,8 @@
         @endforeach
         </div>
     </div>
-    @endif
+@endif
+
 
     <!-- Plain Text -->
     {{-- <div>

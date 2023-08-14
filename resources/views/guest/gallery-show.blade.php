@@ -7,8 +7,8 @@
     <p class="">{{ $gallery->description }}</p>
     <div class="gallery">
 
-      @forelse (json_decode($gallery->photos) as $item)
-          <div class="gallery-item" data-image="{{ asset($item) }}" data-title="Image 1">
+      @forelse (json_decode($gallery->photos) as $key => $item)
+          <div class="gallery-item" data-image="{{ asset($item) }}" data-title="sacred-heart-primary-school-photo-gallery-{{ $key }}">
           </div>
       @empty
           <p class="text-muted text-center">No photo available!</p>

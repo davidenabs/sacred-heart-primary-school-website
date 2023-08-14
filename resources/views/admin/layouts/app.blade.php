@@ -44,7 +44,7 @@
     <script src="{{ asset('backend/assets/bundles/izitoast/js/iziToast.min.js') }}"></script>
     <script src="{{ asset('backend/assets/bundles/sweetalert/sweetalert.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/custom.js') }}"></script>
-    <script src="{{ asset('backend/assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/scripts.js') }}"></script> 
     @if(Session::has('success'))
         <script>
             iziToast.success({position: 'topRight', message: "{{ Session::get('success') }}"})

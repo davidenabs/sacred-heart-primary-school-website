@@ -11,12 +11,13 @@
                     <form action="{{ route('subscribe') }}" method="post">
                         @csrf
                         <input type="email" name="subscribe_email" autocomplete="false" required><input type="submit" value="Subscribe">
-                        @error('subscribe_email')
+
+                    </form>
+                    @error('subscribe_email')
                             <div class="text-danger">
                                 {{ $message }}
                             </div>
                         @enderror
-                    </form>
                 </div>
             </div>
         </div>
@@ -27,7 +28,15 @@
             <div class="row">
 
                 <div class="col-lg-3 col-md-6 footer-contact">
-                    <h3>{{ $settings->school_name ?? env('APP_NAME') }}<span>.</span></h3>
+                    <div class="row align-items-center">
+                        <div class="col-auto text-white">
+                            <img src="{{ asset('shs/logo/sacred-heart-primary-school-kaduna.svg') }}" alt="{{ $settings->school_name ?? env('APP_NAME') }}" srcset="" width="55">
+                        </div>
+                        <div class="col">
+                            <h4>{{ $settings->school_name ?? env('APP_NAME') }}<span>.</span></h4>
+                        </div>
+                    </div>
+
                     <p>
                         {{ $settings->about_school }}<br><br>
                         <strong>Phone:</strong> {{ env('APP_PHONE') ?? '+23480 6071 7501' }}<br>
@@ -82,7 +91,7 @@
             Rights Reserved
         </div>
         <div class="credits">
-            Developed by <a href="{{ route('home') }}">{{ config('app.name') }}</a>
+            Developed by <a href="{{ env('CREATOR_URL') }}">{{ env('CREATOR_NAME') }}</a>
         </div>
     </div>
 </footer><!-- End Footer -->

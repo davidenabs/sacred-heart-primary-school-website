@@ -11,7 +11,7 @@
         @include('guest.includes.error-page', [
             'title' => '404 ERROR! ',
             'message' => "The page you are trying to access doesn't exist or has been moved.",
-            'imageLink' => asset('frontends/assets/img/404.jpg')
+            'imageLink' => asset('frontend/assets/img/errors/404.jpeg')
         ])
     @endif
 @endsection

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="wrapper-pack">
         <center>
-            <h2>{{ $title }}</h2>
+            <h3>{{ $title }}</h3>
             <img src="{{ $imageLink }}" alt="" class="img-err animate__animated animate__bounce" />
             <p style="color: rgb(31, 30, 112); widt: 330px; font-size: 20px;"
                 class="animate__animated animate__backInLeft">{{ $message }}<br>Try going back to the Homepage</p>

@@ -16,7 +16,7 @@
                     <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Application forms for admissions are on sale all year</li>
                     <li class="py-2"><i class="fa fa-check text-success mr-3"></i>It can also be obtained through the school Administrative office</li>
                 </ul>
-                <a href="" class="btn mt-4 py-2 px-4 shs-bg-primary-color text-white">Download</a>
+                <a href="{{ route('download.app.form') }}" class="btn mt-4 py-2 px-4 shs-bg-primary-color text-white">Download</a>
             </div>
             <div class="col-lg-5">
                 <div class=" border-0 revealfade-right" style="width: 400px;">
@@ -24,23 +24,23 @@
                         <h1 class="text-white m-0">Book A Seat</h1>
                     </div>
                     <div class="card-body rounded-bottom p-5 shs-bg-primary-color">
-                        <form>
+                        <form action="https://mail.google.com/mail/?view=cm&fs=1&to=info@sacredheartprimaryschool.org&su=Applying For Admission&body=&bcc=email">
                             <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required />
                             </div>
                             <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
+                                <select name="class" class="custom-select border-0 px-4" style="height: 47px;" required>
                                     <option selected>Select A Class</option>
-                                    <option value="1">Pre-Nursery</option>
-                                    <option value="2">Nursery</option>
-                                    <option value="3">Primary</option>
+                                    <option value="Pre-Nursery">Pre-Nursery</option>
+                                    <option value="Nursery">Nursery</option>
+                                    <option value="Primary">Primary</option>
                                 </select>
                             </div>
                             <div>
-                                <button class="btn btn-block border-0 py-2 btn-light" type="submit" style="padding-bottom: 20px;" id="downloadButton">Download</button>
+                                <button class="btn btn-block border-0 py-2 btn-light" type="submit" style="padding-bottom: 20px;" id="downloadButton">Apply</button>
                             </div>
                         </form>
                     </div>

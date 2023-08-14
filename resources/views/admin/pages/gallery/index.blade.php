@@ -58,6 +58,8 @@
                                                             <a href="{{ route('admin.galleries.show', $gallery->slug) }}">View</a>
                                                             <div class="bullet"></div>
                                                             <a href="{{ route('admin.galleries.edit', $gallery->slug) }}">Edit</a>
+                                                            <div class="bullet"></div>
+                                                            <a href="{{ route('admin.galleries.add.photos', $gallery->slug) }}">Add photos</a>
 
                                                             <div class="bullet"></div>
                                                             <a href="javascript: void(0)" class="text-danger delete-link"

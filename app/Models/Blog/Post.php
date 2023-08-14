@@ -9,10 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use RalphJSmit\Laravel\SEO\Support\HasSEO;
 
 class Post extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, HasSEO;
 
     protected $fillable = [
         'category_id',
@@ -166,5 +167,16 @@ class Post extends Model
         }
 
         return $slug;
+    }
+
+    public function getDynamicSEOData(): SEOData
+    {
+        return new SEOData(
+            title: $this->title,
+            description: $this->summary,
+            author: 'Sacred Heart Primary School Kaduna',
+            image: $this->featured_image,
+            url: url(route('blog.show', $this->slug))
+        );
     }
 }

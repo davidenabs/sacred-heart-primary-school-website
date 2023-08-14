@@ -7,7 +7,7 @@ if (window.Dropzone) {
 
 var dropzone = new Dropzone("div#mydropzone", {
   url: "#",
-  maxFiles: 20,
+  maxFiles: 10,
   addRemoveLinks: true,
   acceptedFiles: ".jpeg, .png, .jpg, .gif", // Allowed file extensions
   maxFilesize: 2, // Max file size in MB

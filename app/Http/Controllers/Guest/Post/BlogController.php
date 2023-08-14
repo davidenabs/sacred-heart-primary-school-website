@@ -7,6 +7,8 @@ use App\Models\Blog\Category;
 use App\Models\Blog\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -14,6 +16,7 @@ class BlogController extends Controller
     public $categories;
     public $popularPosts;
     public $recentPosts;
+    public $seoData;
 
     public function __construct()
     {
@@ -30,9 +33,11 @@ class BlogController extends Controller
             ->take(5)
             ->get(['id', 'title', 'slug', 'category_id', 'featured_image', 'created_at']);
 
+
+
     }
 
-    public function index(Request $request)
+    public function index(Request $request  = null)
     {
         $posts = Post::with([
             'author' => function ($query) {
@@ -61,6 +66,10 @@ class BlogController extends Controller
             'categories' => $this->categories,
             'recentPosts' => $this->recentPosts,
             'popularPosts' => $this->popularPosts,
+                'page' => new SEOData(
+                    title: 'Blog posts, news and events',
+                    description: 'Explore the latest blog posts from Sacred Heart Primary School. Discover valuable insights on education, student development, community engagement, and more. Join us on a journey of knowledge and inspiration.',
+                ),
         ])->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -76,20 +85,22 @@ class BlogController extends Controller
             $relatedPosts = $category->posts()->where('id', '!=', $post->id)->get(['category_id', 'title', 'slug', 'featured_image']);
         }
 
-        // post view counter
-        // $blogKey = 'blog_' . $post->id;
-
-        // if (!Session::has($blogKey)) {
-        //     $post->increment('views');
-        //     Session::put($blogKey, 1);
-        // }
+        $shareButtons = \Share::page(
+            url(route('blog.show', $post->slug)),
+            Str::limit($post->summary, 60, '...')
+      )
+            ->facebook()
+            ->twitter()
+            ->telegram()
+            ->whatsapp();
 
         return view('guest.blog.show', [
             'post' => $post,
             'categories' => $this->categories,
             'recentPosts' => $this->recentPosts,
             'popularPosts' => $this->popularPosts,
-            'relatedPosts' => $relatedPosts
+            'relatedPosts' => $relatedPosts,
+            'shareButtons' => $shareButtons,
         ]);
 
     }

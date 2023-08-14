@@ -1,9 +1,36 @@
 <div>
-    <form wire:submit.prevent="{{ isset($gallery) ? 'updateGallery' : 'upload' }}" method="POST">
+    <form wire:submit.prevent="
+    @if($isAddPhoto)
+    addMorePhotos
+    @else
+    {{ isset($gallery) ? 'updateGallery' : 'upload' }}
+    @endif
+    " method="POST">
         @csrf
         @isset($gallery)
             @method('PUT')
         @endisset
+        @if ($isAddPhoto)
+        <fieldset>
+            <div>
+                <label class="form-label">Images* (You can only add a maximum of 10 photos per upload)</label>
+                <div class="small text-danger">
+                    {{ $err }}
+                </div>
+                @error('images.*')
+                    <div class="small text-danger my-1">
+                        {{ $message }}
+                    </div>
+                @enderror
+                <div class="dropzone" id="mydropzone" wire:ignore>
+                    <div class="fallback" :class="{ 'pointer-events-none cursor-default': isUploading }>
+                        <input name="file" type="file" multiple />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        @include('admin.includes.button', ['title' => 'Add Photos', 'method'=>'addMorePhotos', 'loadingState' => 'Adding...'])
+        @else
         <fieldset>
             <div class="form-group form-float">
                 <div class="form-line">
@@ -32,7 +59,7 @@
         @if (!isset($gallery))
         <fieldset>
             <div>
-                <label class="form-label">Images*</label>
+                <label class="form-label">Images* (You can only add a maximum of 10 photos per upload)</label>
                 <div class="small text-danger">
                     {{ $err }}
                 </div>
@@ -50,9 +77,10 @@
         </fieldset>
         @endif
         @if (isset($gallery))
-        @include('admin.includes.button', ['title' => 'Update Photos', 'method'=>'Update', 'loadingState' => 'Updating...'])
+        @include('admin.includes.button', ['title' => 'Update Photos', 'method'=>'updateGallery', 'loadingState' => 'Updating...'])
         @else
         @include('admin.includes.button', ['title' => 'Upload Photos', 'method'=>'upload', 'loadingState' => 'Uploading...'])
+        @endif
         @endif
     </form>
 </div>

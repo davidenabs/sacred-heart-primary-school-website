@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->string('email');
+            $table->string('name');
             // $table->foreign('parent_id')->references('id')->on('comments')->onDelete('cascade');
             // $table->foreignId('parent_id')->nullable()->constrained('comments');
             $table->foreignId('parent_id')->nullable()->constrained('users')->onDelete('cascade');

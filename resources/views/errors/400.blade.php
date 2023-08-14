@@ -13,7 +13,7 @@
             'title' => '400 ERROR! ',
             'message' => "Bad request (somethimg wrong with
                 URL or parameter).",
-            'imageLink' => asset('frontends/assets/img/400.jpg')
+            'imageLink' => asset('frontends/assets/img/errors/400.jpeg')
         ])
     @endif
 @endsection

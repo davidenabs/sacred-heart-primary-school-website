@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Guest\Post;
 
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use App\Http\Controllers\Controller;
 use App\Models\Blog\Category;
 use App\Models\Blog\Post;
@@ -56,6 +57,10 @@ class CategoryController extends Controller
             'posts' => $posts,
             'categories' => $this->categories,
             'recentPosts' => $this->recentPosts,
+            'page' => new SEOData(
+                title: 'Category',
+                description: $category->summary,
+            ),
         ]);
     }
 }

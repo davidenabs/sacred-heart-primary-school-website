@@ -16,7 +16,8 @@ class GalleryPost extends Component
     use WithFileUploads, UploadFile;
 
     public Gallery $gallery;
-    public $images = [], $title, $description, $err, $page;
+    public $images = [], $title, $description, $err, $page, $isAddPhoto;
+    public $newImagesToAdd = [];
 
     protected $rules = [
         'title' => 'required|string',
@@ -25,15 +26,16 @@ class GalleryPost extends Component
 
     protected $listeners = ['addImage' => 'addImages'];
 
-    public function mount($page, $gallery =null)
+    public function mount($page, $gallery = null, $isAddPhoto = false)
     {
 
         $this->page = $page;
+        $this->isAddPhoto = $isAddPhoto;
 
         if ($gallery) {
             $this->title = $gallery->title;
             $this->description = $gallery->description;
-            $this->images = json_decode($gallery->images);
+            $this->images = json_decode($gallery->photos);
 
             // dd(scandir(public_path('shs_images/gallery')));
 
@@ -50,37 +52,43 @@ class GalleryPost extends Component
                     }
                 }
 
-                $this->dispatchBrowserEvent('imgs', ['result'=>$result]);
+                $this->dispatchBrowserEvent('imgs', ['result' => $result]);
             }
 
             // dd($result);
         }
     }
 
-    public function addImages($images)
+    public function addImages($image)
     {
-        array_push($this->images, $images);
+        if ($this->isAddPhoto) {
+            array_push($this->newImagesToAdd, $image);
+        } else {
+            array_push($this->images, $image);
+        }
     }
 
     public function upload()
     {
         $this->validate();
 
-        if ($this->images) {
+        $imagePathToSave = [];
 
+        if ($this->images) {
             try {
                 $slug = Gallery::generateUniqueSlug($this->title);
-
                 foreach ($this->images as $key => $image) {
-                    $this->images[$key] =  $this->uploadFile($image, Str::uuid(), 'shs_images/gallery');
+                    if (array_key_exists('dataURL', $image)) {
+                        $imagePathToSave[] =  $this->uploadFile($image, Str::uuid(), 'shs_images/gallery');
+                    }
                 }
 
-                $this->images = json_encode($this->images);
+                $imagePathToSave = json_encode($imagePathToSave);
 
                 $gallery = Gallery::create([
                     'title' => $this->title,
                     'slug' => $slug,
-                    'photos' => $this->images,
+                    'photos' => $imagePathToSave,
                     'description' => $this->description
                 ]);
 
@@ -92,17 +100,18 @@ class GalleryPost extends Component
 
                 DB::commit();
 
-                $this->dispatchBrowserEvent(
-                    'showAlert',
-                    ['type' => 'success', 'message' => 'Uploaded successfully!']
-                );
+                // $this->dispatchBrowserEvent(
+                //     'showAlert',
+                //     ['type' => 'success', 'message' => 'Uploaded successfully!']
+                // );
+
+                session()->flash('success', 'Gallery created and uploaded successfully!');
 
                 $this->clear();
 
-                return redirect($this->page);
+                return redirect()->route('admin.galleries.index');
             } catch (\Throwable $th) {
                 DB::rollBack(); // Rollback the transaction if an error occurs
-
                 $this->dispatchBrowserEvent(
                     'showAlert',
                     ['type' => 'error', 'message' => 'Something went wrong!!']
@@ -134,19 +143,75 @@ class GalleryPost extends Component
 
             $this->gallery->update($gallery);
 
-             // Save the post to the database
-             $this->gallery->save();
+            // Save the post to the database
+            $this->gallery->save();
 
-             DB::commit();
+            DB::commit();
 
-             $this->dispatchBrowserEvent(
-                 'showAlert',
-                 ['type' => 'success', 'message' => 'Updated successfully!']
-             );
+            //  $this->dispatchBrowserEvent(
+            //      'showAlert',
+            //      ['type' => 'success', 'message' => 'Updated successfully!']
+            //  );
+
+            session()->flash('success', 'Updated successfully!');
 
             //  $this->clear();
 
-            //  return redirect($this->page);
+            return redirect()->route('admin.galleries.index');
+        } catch (\Throwable $th) {
+            DB::rollBack(); // Rollback the transaction if an error occurs
+            $this->dispatchBrowserEvent(
+                'showAlert',
+                ['type' => 'error', 'message' => 'Something went wrong!!']
+            );
+        }
+    }
+
+    public function addMorePhotos()
+    {
+        $imagePathToSave = [];
+
+        // dd($this->images);
+        try {
+            if ($this->newImagesToAdd) {
+                DB::beginTransaction();
+
+
+                foreach ($this->newImagesToAdd as $image) {
+                    if (array_key_exists('dataURL', $image)) {
+                        $imagePathToSave[] =  $this->uploadFile($image, Str::uuid(), 'shs_images/gallery');
+                    }
+                }
+
+                if ($this->images) {
+                    $imagePathToSave =  array_merge($imagePathToSave, $this->images);
+                }
+
+                $imagePathToSave = json_encode($imagePathToSave);
+
+                $this->gallery->update(['photos' => $imagePathToSave]);
+
+                // Save the post to the database
+                $this->gallery->save();
+
+                DB::commit();
+
+                //  $this->dispatchBrowserEvent(
+                //      'showAlert',
+                //      ['type' => 'success', 'message' => 'Photos added successfully!']
+                //  );
+
+                session()->flash('success', 'Photos added successfully!');
+
+                //  $this->clear();
+
+                return redirect()->route('admin.galleries.index');
+            } else {
+                $this->dispatchBrowserEvent(
+                    'showAlert',
+                    ['type' => 'error', 'message' => 'A mininum of photo is required!']
+                );
+            }
         } catch (\Throwable $th) {
             DB::rollBack(); // Rollback the transaction if an error occurs
             $this->dispatchBrowserEvent(
@@ -162,56 +227,6 @@ class GalleryPost extends Component
         $this->description = '';
         $this->images = [];
     }
-
-    // public $files = [];
-    // public $currentStep = 1;
-    // public $images  = [], $title, $description;
-
-
-    // public function finishUpload($name, $tmpPath, $isMultiple)
-    // {
-    //     $this->cleanupOldUploads();
-
-    //     $files = collect($tmpPath)->map(function ($i) {
-    //         return TemporaryUploadedFile::createFromLivewire($i);
-    //     })->toArray();
-    //     $this->emitSelf('upload:finished', $name, collect($files)->map->getFilename()->toArray());
-
-    //     $files = array_merge($this->getPropertyValue($name), $files);
-    //     $this->syncInput($name, $files);
-    // }
-
-    // public function firstStepSubmit()
-    // {
-    //     $validatedData = $this->validate([
-    //         'title' => 'required|string',
-    //         'description' => 'required|string',
-    //     ]);
-
-    //     $this->currentStep = 2;
-    // }
-
-    // public function back($step)
-    // {
-    //     $this->currentStep = $step;
-    // }
-
-    // public function clear()
-    // {
-    //     $this->title = '';
-    //     $this->description = '';
-    // }
-
-
-    // public function fileUpload($file)
-    // {
-    //     // Store the uploaded file and get its path
-    //     $path = $file->store('files', 'public');
-
-    //     // Add the file path to the list of uploaded files
-    //     $this->images[] = $path;
-    // }
-
 
     public function render()
     {

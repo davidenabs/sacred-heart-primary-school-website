@@ -3,7 +3,7 @@
         z-index: 9999;
       ">
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0 px-lg-5">
-            <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+            <a href="{{ route('home') }}" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
                 <span class="text-primary"><img src="{{ asset('shs/logo/sacred-heart-primary-school-kaduna.webp') }}" class="logo"></span>
 
             </a>

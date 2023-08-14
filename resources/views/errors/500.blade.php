@@ -11,7 +11,7 @@
         @include('guest.includes.error-page', [
             'title' => '500 ERROR! ',
             'message' => "General Server Error!",
-            'imageLink' => asset('frontends/assets/img/500.jpg')
+            'imageLink' => asset('frontend/assets/img/errors/500.jpeg')
         ])
     @endif
 @endsection

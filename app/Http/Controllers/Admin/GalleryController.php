@@ -70,4 +70,10 @@ class GalleryController extends Controller
 
         return response()->json('Deleted successfully');
     }
+
+    public function addPhotos(Gallery $gallery)
+    {
+        $isAddPhoto = true;
+        return view('admin.pages.gallery.create', compact('gallery', 'isAddPhoto'));
+    }
 }

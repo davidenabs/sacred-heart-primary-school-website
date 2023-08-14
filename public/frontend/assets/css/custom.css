@@ -60,7 +60,7 @@
 }
 
 .img-fixed-size {
-    height: 400px;
+    height: 450px;
     /* Set the desired fixed height */
     width: 100%;
     /* Set the desired fixed width */
@@ -71,13 +71,12 @@
 /* Define styles for carousel images and overlay in mobile and tablet view */
 /* Style the static text on top of the carousel */
 .static-text {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
     z-index: 2;
-    /* Ensure the text appears above the carousel images */
     text-align: center;
 }
 
@@ -85,10 +84,6 @@
 @media (max-width: 992px) {
     .carousel-inner {
         position: relative;
-    }
-
-    .static-text {
-      top: 45%;
     }
 
     .carousel-overlay {
@@ -340,4 +335,3 @@ display:none;
       padding: 2px 0;
     }
   }
-  

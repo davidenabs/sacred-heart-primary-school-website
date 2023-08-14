@@ -5,11 +5,11 @@
 
     @isset($category)
         @include('guest.includes.header', [
-            'title' => 'Category: ' . $category->title,
-            'description' => Str::limit($category->description, 20, '...'),
+            'title' => $category->title,
+            'description' => 'Category',
         ])
     @else
-        @include('guest.includes.header', ['title' => 'School Blog', 'description' => 'Our Blog'])
+        @include('guest.includes.header', ['title' => 'Blog Posts and Events', 'description' => 'Our Blog'])
     @endisset
 
     <!-- Blog Start -->
@@ -20,6 +20,8 @@
                     <div class="text-center pb-2">
                         <p class="section-title px-5"><span class="px-2">Category</span></p>
                         <h1 class="mb-4">Articles On This Category</h1>
+                        <p class="my-3 py-2 border-top border-bottom">
+                            {{ $category->description }}
                     </div>
                 @else
                     <div class="text-center pb-2">
@@ -54,8 +56,10 @@
                                         </p>
 
                                         <div class="article-cta text-right">
-                                            <small><a href="{{ route('blog.show', $post->slug) }}" class="text-primary">Read
-                                                    More <i class="fas fa-chevron-right"></i></a></small>
+                                            <small>
+                                                <a href="{{ route('blog.show', $post->slug) }}" class="text-primary">Read
+                                                    More</a> <i class="fas fa-chevron-right"></i>
+                                            </small>
                                         </div>
                                     </div>
 

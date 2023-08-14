@@ -13,17 +13,21 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                @if (isset($gallery))
+                                @if (isset($gallery) && !isset($isAddPhoto))
                                     <h4>Edit Photo Gallery</h4>
+                                @elseif (isset($isAddPhoto))
+                                    <h4>Add Photo Gallery</h4>
                                 @else
                                     <h4>Add New Photo Gallery</h4>
                                 @endif
                             </div>
                             <div class="card-body">
-                                @if (isset($gallery))
-                                    @livewire('admin.gallery-post', ['page'=>request()->fullUrl(), 'gallery' => $gallery])
+                                @if (isset($gallery) && !isset($isAddPhoto))
+                                    @livewire('admin.gallery-post', ['page' => request()->fullUrl(), 'gallery' => $gallery])
+                                @elseif (isset($isAddPhoto))
+                                    @livewire('admin.gallery-post', ['page' => request()->fullUrl(), 'gallery' => $gallery, 'isAddPhoto' => true])
                                 @else
-                                    @livewire('admin.gallery-post', ['page'=>request()->fullUrl()])
+                                    @livewire('admin.gallery-post', ['page' => request()->fullUrl()])
                                 @endif
                             </div>
                         </div>
@@ -38,6 +42,3 @@
 @section('scripts')
 
 @endsection
-
-
-

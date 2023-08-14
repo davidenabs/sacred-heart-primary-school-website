@@ -13,7 +13,7 @@
             'title' => '422 ERROR! ',
             'message' => "Unprocessable Entity! <br> ( validation
                 failed).",
-            'imageLink' => asset('frontends/assets/img/422.jpg')
+            'imageLink' => asset('frontend/assets/img/errors/422.jpeg')
         ])
     @endif
 @endsection

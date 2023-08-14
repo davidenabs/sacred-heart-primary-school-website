@@ -12,15 +12,10 @@ class LoginResponse implements LoginResponseContract
      */
     public function toResponse($request)
     {
-        // $home = auth()->user()->is_admin ? '/admin' : '/dashboard';
-dd(auth()->user()->role);
         switch (auth()->user()->role) {
             case 'ADM':
                 $home = '/admin';
                 break;
-            // case 'USR':
-            //     $home = '/dashboard';
-                // break;
             case 'WRT':
                 $home = '/author';
                 break;

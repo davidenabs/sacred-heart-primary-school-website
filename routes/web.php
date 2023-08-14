@@ -25,12 +25,12 @@ Route::post('/contact-us', [App\Http\Controllers\Guest\MainController::class, 'c
 Route::get('/our-management', [App\Http\Controllers\Guest\MainController::class, 'management'])->name('management');
 Route::get('/gallery', [App\Http\Controllers\Guest\MainController::class, 'gallery'])->name('gallery');
 Route::get('/gallery-show/{gallery}', [App\Http\Controllers\Guest\MainController::class, 'galleryShow'])->name('gallery.show');
-Route::get('/news-event', [App\Http\Controllers\Guest\MainController::class, 'blog'])->name('blog');
+// Route::get('/news', [App\Http\Controllers\Guest\MainController::class, 'blog'])->name('blog');
 Route::get('/apply-now', [App\Http\Controllers\Guest\MainController::class, 'apply'])->name('apply');
 // blog
 Route::get('/news-events', [App\Http\Controllers\Guest\Post\BlogController::class, 'index'])->name('blog.index');
 Route::get('/news-events/{post}', [App\Http\Controllers\Guest\Post\BlogController::class, 'show'])->name('blog.show')->middleware('track.views');
-// blog
+// category
 Route::get('/news-events/category', [App\Http\Controllers\Guest\Post\CategoryController::class, 'index'])->name('category.index');
 Route::get('/news-events/category/{category}', [App\Http\Controllers\Guest\Post\CategoryController::class, 'show'])->name('category.show');
 Route::get('/testimony', [App\Http\Controllers\Guest\MainController::class, 'createTestimony'])->name('testimony.create');
@@ -39,6 +39,8 @@ Route::post('/testimony', [App\Http\Controllers\Guest\MainController::class, 'st
 Route::post('/subscribe', [App\Http\Controllers\Guest\MainController::class, 'subscribe'])->name('subscribe');
 Route::get('/unsubscribe', [App\Http\Controllers\Guest\MainController::class, 'unsubscribe'])->name('unsubscribe');
 Route::post('/unsubscribe', [App\Http\Controllers\Guest\MainController::class, 'unsubscribe'])->name('unsubscribe.user');
+
+Route::get('/download/application-form', [App\Http\Controllers\Guest\MainController::class, 'downloadApplicationForm'])->name('download.app.form');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session') ,'verified', 'activeuser'])->group(function () {
 
@@ -94,6 +96,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session') ,'verified',
 
         // gallery
         Route::resource('galleries', 'App\Http\Controllers\Admin\GalleryController');
+        Route::get('galleries/add-photos/{gallery}', 'App\Http\Controllers\Admin\GalleryController@addPhotos')->name('galleries.add.photos');
 
         // mail
         Route::get('mail', 'App\Http\Controllers\Admin\MailController@index')->name('mail.index');
