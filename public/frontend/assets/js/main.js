@@ -100,56 +100,56 @@
 
 })(jQuery);
  /* Pop up Message */
- document.addEventListener("DOMContentLoaded", function() {
-    var popupContainer = document.getElementById("popup-container");
-    var popupMessage = document.getElementById("popup-message");
+//  document.addEventListener("DOMContentLoaded", function() {
+//     var popupContainer = document.getElementById("popup-container");
+//     var popupMessage = document.getElementById("popup-message");
 
-    function showPopup() {
-        popupContainer.style.display = "flex";
-    }
+//     function showPopup() {
+//         popupContainer.style.display = "flex";
+//     }
 
-    function hidePopup() {
-        popupContainer.style.display = "none";
-    }
+    // function hidePopup() {
+    //     popupContainer.style.display = "none";
+    // }
 
-    function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires=" + d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
+//     function setCookie(cname, cvalue, exdays) {
+//         var d = new Date();
+//         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+//         var expires = "expires=" + d.toUTCString();
+//         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+//     }
 
-    function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
+//     function getCookie(cname) {
+//         var name = cname + "=";
+//         var decodedCookie = decodeURIComponent(document.cookie);
+//         var ca = decodedCookie.split(';');
+//         for (var i = 0; i < ca.length; i++) {
+//             var c = ca[i];
+//             while (c.charAt(0) == ' ') {
+//                 c = c.substring(1);
+//             }
+//             if (c.indexOf(name) == 0) {
+//                 return c.substring(name.length, c.length);
+//             }
+//         }
+//         return "";
+//     }
 
-    // Check if the cookie exists
-    var userSeenPopup = getCookie("popup_seen");
-    if (!userSeenPopup) {
-        // Show the pop-up if the user hasn't seen it before
-        showPopup();
-        // Set the "popup_seen" cookie to remember that the user has seen the pop-up
-        setCookie("popup_seen", "true", 1); // Expires in 1 day
-    }
+//     // Check if the cookie exists
+//     var userSeenPopup = getCookie("popup_seen");
+//     if (!userSeenPopup) {
+//         // Show the pop-up if the user hasn't seen it before
+//         showPopup();
+//         // Set the "popup_seen" cookie to remember that the user has seen the pop-up
+//         setCookie("popup_seen", "true", 1); // Expires in 1 day
+//     }
 
-    // Hide the pop-up when clicked outside the message
-    popupContainer.addEventListener("click", hidePopup);
-    popupMessage.addEventListener("click", function(event) {
-        event.stopPropagation();
-    });
-});
+//     // Hide the pop-up when clicked outside the message
+//     popupContainer.addEventListener("click", hidePopup);
+//     popupMessage.addEventListener("click", function(event) {
+//         event.stopPropagation();
+//     });
+// });
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     var popupContainer = document.getElementById("popup-container");

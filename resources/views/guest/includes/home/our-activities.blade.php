@@ -1,5 +1,5 @@
 <div class="py-3 light-g-blue">
-    <div class="container gallery-container reveal fade-bottom">
+    <div class="container allery-container reveal fade-bottom">
         <div class="text-center pb-2 gx-1">
             <p class="section-title px-5"><span class="px-2">Our Activities</span></p>
             <h1 class="mb-4">The School Activities</h1>
@@ -9,9 +9,9 @@
             <div class="col mb-3">
                 <div class="thumbnail text-center">
                     <div class="svg-container">
-                        <div class="svg-info shs-bg-primary-color" style="width: 75px; height: 75px;">
+                        <div class="svg-info shs-bg-primary-color" style="width: 55px; height: 55px;">
                             <!-- SVG Icon for Sports -->
-                            <i class="fas fa-futbol text-light" style="font-size: 65px"></i>
+                            <i class="fas fa-futbol text-light" style="font-size: 35px"></i>
                         </div>
                     </div>
                     <br>
@@ -27,9 +27,9 @@
             <div class="col mb-3">
                 <div class="thumbnail text-center">
                     <div class="svg-container">
-                        <div class="svg-info shs-bg-primary-color" style="width: 75px; height: 75px;">
+                        <div class="svg-info shs-bg-primary-color" style="width: 55px; height: 55px;">
                             <!-- SVG Icon for Sports -->
-                            <i class="fas fa-music text-light" style="font-size: 45px"></i>
+                            <i class="fas fa-music text-light" style="font-size: 25px"></i>
                         </div>
                     </div>
                     <br>
@@ -44,9 +44,9 @@
             <div class="col mb-3">
                 <div class="thumbnail text-center">
                     <div class="svg-container">
-                        <div class="svg-info shs-bg-primary-color" style="width: 75px; height: 75px;">
+                        <div class="svg-info shs-bg-primary-color" style="width: 55px; height: 55px;">
                             <!-- SVG Icon for Sports -->
-                            <i class="fas fa-paint-brush text-light" style="font-size: 45px"></i>
+                            <i class="fas fa-paint-brush text-light" style="font-size: 25px"></i>
                         </div>
                     </div>
                     <br>
@@ -61,9 +61,9 @@
             <div class="col mb-3">
                 <div class="thumbnail text-center">
                     <div class="svg-container">
-                        <div class="svg-info shs-bg-primary-color" style="width: 75px; height: 75px;">
+                        <div class="svg-info shs-bg-primary-color" style="width: 55px; height: 55px;">
                             <!-- SVG Icon for Sports -->
-                            <i class="fas fa-theater-masks text-light" style="font-size: 45px"></i>
+                            <i class="fas fa-theater-masks text-light" style="font-size: 25px"></i>
                         </div>
                     </div>
                     <br>
@@ -78,9 +78,9 @@
             <div class="col mb-3">
                 <div class="thumbnail text-center">
                     <div class="svg-container">
-                        <div class="svg-info shs-bg-primary-color" style="width: 75px; height: 75px;">
+                        <div class="svg-info shs-bg-primary-color" style="width: 55px; height: 55px;">
                             <!-- SVG Icon for Sports -->
-                            <i class="fas fa-laptop text-light" style="font-size: 45px"></i>
+                            <i class="fas fa-laptop text-light" style="font-size: 25px"></i>
                         </div>
                     </div>
                     <br>
@@ -95,9 +95,9 @@
             <div class="col mb-3">
                 <div class="thumbnail text-center">
                     <div class="svg-container">
-                        <div class="svg-info shs-bg-primary-color" style="width: 75px; height: 75px;">
+                        <div class="svg-info shs-bg-primary-color" style="width: 55px; height: 55px;">
                             <!-- SVG Icon for Sports -->
-                            <i class="fas fa-pencil-alt text-light" style="font-size: 45px"></i>
+                            <i class="fas fa-pencil-alt text-light" style="font-size: 25px"></i>
                         </div>
                     </div>
                     <br>

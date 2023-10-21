@@ -24,8 +24,8 @@
                             economies as a whole.</strong></p>
                 </div>
                 <div class="col-lg-5">
-                    <img class="img-fluid rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/img/img1 - Copy.jpg') }}"
-                        alt=""
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/about.jpg') }}"
+                        alt="{{ config('app.name') }}"
                         style="width: 500px; height: 250px animation: fadeIn 5s; @keyframes fadeIn {
                     0%{opacity: 0;}
                     100% {opacity: 1;}
@@ -44,8 +44,8 @@
         <div class="container reveal fade-left">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img class=" w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/img/Ace1.jpg') }}"
-                        alt="">
+                    <img class=" w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/mission.jpg') }}"
+                        alt="{{ config('app.name') }} Mission">
                 </div>
                 <div class="col-lg-7">
                     <p class="section-title pr-5"><span class="light-g-blue pr-2">About</span></p>
@@ -78,7 +78,7 @@
 
             </div>
             <div class="col-lg-5">
-                <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/img/Ace.jpg') }}" alt="">
+                <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/vision.jpg') }}" alt="{{ config('app.name') }} Vision">
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
         <div class="container reveal fade-left">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/img/Student1.png') }}" alt=""
+                    <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/vector-student.png') }}" alt="{{ config('app.name') }} Moral Values"
                         style="">
                 </div>
                 <div class="col-lg-7">
@@ -132,7 +132,7 @@
                 </div>
                 <div class="col-lg-5">
                     <img class="w-100 rounded mb-5 mb-lg-0 reveal fade-in"
-                        src="{{ asset('frontend/assets/img/5.png') }}" alt="">
+                        src="{{ asset('frontend/assets/images/admission.png') }}" alt="{{ config('app.name') }} Admission Guideline">
                 </div>
             </div>
         </div>

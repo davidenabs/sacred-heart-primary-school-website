@@ -9,9 +9,6 @@
             <div class="d-flex justify-content-around">
                 <div>
                     <div>
-                        {{-- <img src="{{ asset('shs_images/circles/1.webp') }}" alt=" " class="moving-image" --}}
-                        {{-- style="width: 20px;"> --}}
-                        {{-- <img src="{{ asset('shs_images/circles/3.webp') }}" alt=" " class="moving-image" style="width: 20px; "> --}}
                         <img src="{{ asset('shs_images/circles/4.webp') }}" alt=" " class="moving-image d-block"
                             style="width: 20px;">
                     </div>
@@ -58,18 +55,11 @@
                 <div id="imageCarousel" class="carouselslide" data-ride="carouselx">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="hero-img mt-5 d-none d-lg-block" src="{{ asset('frontend/assets/img/img4.jpg') }}"
+                            <div class="circular-image m-4 d-none d-lg-block">
+                                <img class="hero-imgmt-5" src="{{ asset('frontend/assets/images/hero-1.jpg') }}"
                                 alt="">
+                            </div>
                         </div>
-                        {{-- <!-- Add more carousel items as needed -->
-                        <div class="carousel-item">
-                            <img class="hero-img mt-5 d-none d-lg-block" src="{{ asset('frontend/assets/img/img10.jpg') }}"
-                                alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="hero-img mt-5 d-none d-lg-block" src="{{ asset('frontend/assets/img/img8.jpg') }}"
-                                alt="">
-                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -95,17 +85,17 @@
             <div class="carousel-inner">
                 <div class="carousel-item">
                     <img class="img-fluid zoom-in img-fixed-size d-block w-100"
-                        src="{{ asset('frontend/assets/img/img6.jpg') }}" alt="First slide">
+                        src="{{ asset('frontend/assets/images/hero-2.jpg') }}" alt="First slide">
                     <div class="carousel-overlay"></div>
                 </div>
                 <div class="carousel-item">
                     <img class="img-fluid zoom-in img-fixed-size d-block w-100"
-                        src="{{ asset('frontend/assets/img/img8.jpg') }}" alt="Second slide">
+                        src="{{ asset('frontend/assets/images/hero-3.jpg') }}" alt="Second slide">
                     <div class="carousel-overlay"></div>
                 </div>
                 <div class="carousel-item active">
                     <img class="img-fluid zoom-in img-fixed-size d-block w-100"
-                        src="{{ asset('frontend/assets/img/img10.jpg') }}" alt="Third slide">
+                        src="{{ asset('frontend/assets/images/hero-4.jpg') }}" alt="Third slide">
                     <div class="carousel-overlay"></div>
                 </div>
             </div>
@@ -114,7 +104,7 @@
 
 
     <!-- Pop Welcome MEssage -->
-    {{-- @include('guest.includes.home.welcome-message') --}}
+    @include('guest.includes.home.welcome-message')
     <!-- end Pop Welcome MEssage -->
     <!-- Gallery -->
     @include('guest.includes.home.gallery')

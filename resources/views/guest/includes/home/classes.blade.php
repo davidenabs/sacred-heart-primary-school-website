@@ -8,9 +8,9 @@
             <div class="row">
                 <div class="col-lg-4 mb-5">
                     <div class="border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/img/img7.jpg') }}" alt="">
+                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-6.jpg') }}" alt="">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Kindergarten Classes</h5>
+                            <h5 class="card-title">Pre-Nursery Class</h5>
                             <p class="card-text">Cultivating curious minds through play-based learning, setting the
                                 foundation for lifelong exploration at Sacred Heart's nurturing Kindergarten.</p>
                         </div>
@@ -22,9 +22,9 @@
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class="border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/img/img6.jpg') }}" alt="">
+                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-4.jpg') }}" alt="">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Nursery Classes</h5>
+                            <h5 class="card-title">Nursery Class</h5>
                             <p class="card-text">A loving start to education, our Nursery provides a secure environment
                                 for early socialization, language skills, and joyful discovery.</p>
                         </div>
@@ -37,9 +37,9 @@
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class=" border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/img/img2.jpg') }}" alt="">
+                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-7.jpg') }}" alt="">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Primary Classes</h5>
+                            <h5 class="card-title">Primary Class</h5>
                             <p class="card-text">Where young minds flourish, combining academics, character
                                 development, and critical thinking, preparing students for success and a love for
                                 learning.</p>

@@ -27,7 +27,7 @@
         <ul class="list-group list-group-flush">
             @foreach ($categories as $category)
             <li class="list-group-item px-0 d-flexustify-content-between">
-                    <a href="{{ route('category.show', $category->slug) }}" class="shs-text-primary-color">
+                    <a href="{{ route('category.posts', $category) }}" class="shs-text-primary-color">
                         {{  $category->title }}
                         <span class="badge badge-primary badge-pill float-right">
                             {{ $category->posts()->where('is_published', true)->where('is_draft', false)->count() }}
