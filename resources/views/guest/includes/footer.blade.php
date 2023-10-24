@@ -27,7 +27,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-3 col-md-6 footer-contact">
+                <div class="col-lg-4 col-md-6 footer-contact">
                     <div class="row align-items-center">
                         <div class="col-auto text-white">
                             <img src="{{ asset('shs/logo/sacred-heart-primary-school-kaduna.svg') }}" alt="{{ $settings->school_name ?? env('APP_NAME') }}" srcset="" width="55">
@@ -44,7 +44,7 @@
                         <strong>Address:</strong> {{ env('APP_EMAIL_SUPPORT') ?? '46 independence way Kaduna, Kaduna State' }}<br>
                     </p>
                 </div>
-                <div class="col-lg-3 col-md-6 footer-links">
+                <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
@@ -56,7 +56,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 footer-links">
+                <div class="col-lg-2 col-md-6 footer-links">
                     <h4>know More</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ route('contact') }}">Contact us</a></li>
@@ -66,7 +66,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 footer-links">
+                <div class="col-lg-4 col-md-6 footer-links">
                     <h4>Our Social Networks</h4>
                     <p class="text-light">Also connect with us on our social media plaforms</p>
                     <div class="social-links mt-3">
