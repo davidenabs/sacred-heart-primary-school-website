@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-5">
                     <div class="border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-6.jpg') }}" alt="">
+                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-6.webp') }}" alt="">
                         <div class="card-body text-center">
                             <h5 class="card-title">Pre-Nursery Class</h5>
                             <p class="card-text">Cultivating curious minds through play-based learning, setting the
@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class="border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-4.jpg') }}" alt="">
+                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-4.webp') }}" alt="">
                         <div class="card-body text-center">
                             <h5 class="card-title">Nursery Class</h5>
                             <p class="card-text">A loving start to education, our Nursery provides a secure environment
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class=" border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-7.jpg') }}" alt="">
+                        <img class="card-img-top mb-2" src="{{ asset('frontend/assets/images/g-7.webp') }}" alt="">
                         <div class="card-body text-center">
                             <h5 class="card-title">Primary Class</h5>
                             <p class="card-text">Where young minds flourish, combining academics, character

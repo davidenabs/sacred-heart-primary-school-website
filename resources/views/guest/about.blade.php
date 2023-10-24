@@ -24,7 +24,7 @@
                             economies as a whole.</strong></p>
                 </div>
                 <div class="col-lg-5">
-                    <img class="img-fluid rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/about.jpg') }}"
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/about.webp') }}"
                         alt="{{ config('app.name') }}"
                         style="width: 500px; height: 250px animation: fadeIn 5s; @keyframes fadeIn {
                     0%{opacity: 0;}
@@ -44,7 +44,7 @@
         <div class="container reveal fade-left">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img class=" w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/mission.jpg') }}"
+                    <img class=" w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/mission.webp') }}"
                         alt="{{ config('app.name') }} Mission">
                 </div>
                 <div class="col-lg-7">
@@ -78,7 +78,7 @@
 
             </div>
             <div class="col-lg-5">
-                <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/vision.jpg') }}" alt="{{ config('app.name') }} Vision">
+                <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/vision.webp') }}" alt="{{ config('app.name') }} Vision">
             </div>
         </div>
     </div>

@@ -6,56 +6,56 @@
     <div class="container page-top">
         <div class="row">
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="{{ asset('frontend/assets//images/g-1.jpg') }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ asset('frontend/assets//images/g-1.jpg') }}" class="zoom img-fluid reveal fade-left"
+                <a href="{{ asset('frontend/assets//images/g-1.webp') }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('frontend/assets//images/g-1.webp') }}" class="zoom img-fluid reveal fade-left"
                         alt="{{ config('app.name') }}">
 
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="{{ asset('frontend/assets/images/g-2.jpg') }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ asset('frontend/assets/images/g-2.jpg') }}" class="zoom img-fluid reveal" alt="{{ config('app.name') }}">
+                <a href="{{ asset('frontend/assets/images/g-2.webp') }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('frontend/assets/images/g-2.webp') }}" class="zoom img-fluid reveal" alt="{{ config('app.name') }}">
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="{{ asset('frontend/assets/images/g-3.jpg') }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ asset('frontend/assets/images/g-3.jpg') }}" class="zoom img-fluid reveal fade-top "
+                <a href="{{ asset('frontend/assets/images/g-3.webp') }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('frontend/assets/images/g-3.webp') }}" class="zoom img-fluid reveal fade-top "
                         alt="{{ config('app.name') }}">
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb d-md-block d-m-none">
-                <a href="{{ asset('frontend/assets/images/g-4.jpg') }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ asset('frontend/assets/images/g-4.jpg') }}" class="zoom img-fluid reveal fade-right "
+                <a href="{{ asset('frontend/assets/images/g-4.webp') }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('frontend/assets/images/g-4.webp') }}" class="zoom img-fluid reveal fade-right "
                         alt="{{ config('app.name') }}">
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb d-md-block d-m-none">
-                <a href="{{ asset('frontend/assets/images/g-5.jpg') }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ asset('frontend/assets/images/g-5.jpg') }}" class="zoom img-fluid reveal fade-left "
+                <a href="{{ asset('frontend/assets/images/g-5.webp') }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('frontend/assets/images/g-5.webp') }}" class="zoom img-fluid reveal fade-left "
                         alt="{{ config('app.name') }}">
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb d-md-block d-m-none">
-                <a href="{{ asset('frontend/assets/images/g-10.jpg') }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ asset('frontend/assets/images/g-10.jpg') }}" class="zoom img-fluid reveal fade-bottom "
+                <a href="{{ asset('frontend/assets/images/g-10.webp') }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('frontend/assets/images/g-10.webp') }}" class="zoom img-fluid reveal fade-bottom "
                         alt="{{ config('app.name') }}">
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb d-md-block d-m-none">
-                <a href="{{ asset('frontend/assets/images/g-9.jpg') }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ asset('frontend/assets/images/g-9.jpg') }}" class="zoom img-fluid reveal fade-top "
+                <a href="{{ asset('frontend/assets/images/g-9.webp') }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('frontend/assets/images/g-9.webp') }}" class="zoom img-fluid reveal fade-top "
                         alt="{{ config('app.name') }}">
                 </a>
             </div>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb d-md-block d-sm-none">
-                <a href="{{ asset('frontend/assets/images/g-8.jpg') }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ asset('frontend/assets/images/g-8.jpg') }}" class="zoom img-fluid reveal fade-right "
+                <a href="{{ asset('frontend/assets/images/g-8.webp') }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('frontend/assets/images/g-8.webp') }}" class="zoom img-fluid reveal fade-right "
                         alt="{{ config('app.name') }}">
                 </a>
             </div>
