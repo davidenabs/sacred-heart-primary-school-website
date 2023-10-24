@@ -24,7 +24,7 @@
                             economies as a whole.</strong></p>
                 </div>
                 <div class="col-lg-5">
-                    <img class="img-fluid rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/about.webp') }}"
+                    <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/about.webp') }}"
                         alt="{{ config('app.name') }}"
                         style="width: 500px; height: 250px animation: fadeIn 5s; @keyframes fadeIn {
                     0%{opacity: 0;}
@@ -89,7 +89,7 @@
         <div class="container reveal fade-left">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/vector-student.png') }}" alt="{{ config('app.name') }} Moral Values"
+                    <img class="w-100 rounded mb-5 mb-lg-0" src="{{ asset('frontend/assets/images/vector-student.webp') }}" alt="{{ config('app.name') }} Moral Values"
                         style="">
                 </div>
                 <div class="col-lg-7">
@@ -132,7 +132,7 @@
                 </div>
                 <div class="col-lg-5">
                     <img class="w-100 rounded mb-5 mb-lg-0 reveal fade-in"
-                        src="{{ asset('frontend/assets/images/admission.png') }}" alt="{{ config('app.name') }} Admission Guideline">
+                        src="{{ asset('frontend/assets/images/admission.webp') }}" alt="{{ config('app.name') }} Admission Guideline">
                 </div>
             </div>
         </div>
