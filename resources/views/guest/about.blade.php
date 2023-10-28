@@ -18,7 +18,7 @@
                             <br><br>
                             Sacred Heart Primary School has produced <br>
                             high quality graduates who have <br>proceeded into diverse fields of studies <br>
-                            and have contributed and continuing to <br>
+                            and have contributed and continue to <br>
                             contribute positively to the development of <br>
                             our great country, Nigeria and its <br>
                             economies as a whole.</strong></p>

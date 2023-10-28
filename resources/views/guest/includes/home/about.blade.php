@@ -11,7 +11,7 @@
                 <div>
                     <h2 class="mb-4">Best School For Your Kids</h2>
                 </div>
-                <p>Our Vission for every child is to build a community where all children feel lved,
+                <p>Our Vision for every child is to build a community where all children feel, loved,
                     respected and encouraged to develop to their fullest potentials.
                 </p>
                 <div class="row pt-2 pb-4">
