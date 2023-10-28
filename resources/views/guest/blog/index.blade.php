@@ -25,7 +25,7 @@
                     </div>
                 @else
                     <div class="text-center pb-2">
-                        <p class="section-title px-5"><span class="px-2">Latest Blog</span></p>
+                        <p class="section-title px-5"><span class="px-2">Latest Blog Post</span></p>
                         <h1 class="mb-4">Latest Articles From Blog</h1>
                     </div>
                 @endisset
